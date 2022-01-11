@@ -1,0 +1,77 @@
+main {
+  max-width: 700px;
+  width: 97%;
+  margin: 0 auto;
+  padding: 4em 0 2em; 
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  object-fit: cover;
+  border: 3px solid aqua;
+  border-radius: 10px;
+  box-shadow: 2px 2px 30px gray;
+}
+
+.search {
+  padding-bottom: 0.75em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search > input {
+  border: 2px solid gray;
+  padding: 0.45em;
+  display: inline-block;
+  width: 75%;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.doc-card {
+  padding: 0.5em;
+  border-radius: 3px;
+  background-color: hsla(123, 60%, 49%, 0.2);
+  box-shadow: 1px 2px 30px hsla(123, 60%, 49%, 0.2);
+  margin: 0.8em 0;
+  display: grid;
+  grid-template-columns: 130px auto;
+  grid-gap: 5px;
+  transition: transform .4s;
+}
+
+.doc-card:hover {
+  transform: scale(1.02);
+  outline: 1px solid hsl(123, 60%, 49%);
+}
+
+.doc-card > img {
+  border: 1px solid aqua;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px gray;
+} 
+
+h1.doc-title {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(123, 80%, 25%);
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+}
+
+p.doc-par {
+  font-size: 1.1rem;
+}
+
+img.doc-img {
+  display: block;
+  margin: 1em auto;
+  /* height: 550px; */
+}
+
