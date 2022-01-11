@@ -10,7 +10,7 @@ const docs = [
     id: 2,
     title: "SGS sınav başvuru belgesi",
     img: "/img/basvuru-belgesi.jpg",
-    desc: "tanım",
+    desc: "Genellikle Staja Giriş Sınavı(SGS) ile ilgili belgelerin olduğu bölümde karşımıza çıkar. Yani, A-Z sıralaması seçiliyse sonlara doğru, Z-A sıralaması seçiliyse başlarda. Adayın fotoğrafının olması zorunlu değildir.",
     keywords: "kişisel bilgiler iletişim bilgileri sgs sınav başvuru belgesi belgesi başvuru sgs başvuru kişisel iletişim"
   }
 ];
