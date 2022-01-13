@@ -17,7 +17,8 @@ const docs = [
     id: 3,
     title: "hizmet listesi (aylık hizmet listesi)",
     img: ["/img/aylik-hizmet.jpg"],
-    desc: "Çoğunlukla işyeri değişikliği dilekçelerinin yakınlarında karşınıza çıkar ve yine çoğunlukla birdan fazla sayfadan oluşur. Meslek mensubunun yanında veya gözetiminde staj yapılmış ise bu belge dizisinin ilk sayfasında bir şirket adı yazılıdır, kategori eklenirken o şirketin vergi numarası da girilmelidir. Eğer meslek mensubu yanında staj yapılmışsa o meslek mensubunun vergi numarası girilmelidir."
+    desc: "Çoğunlukla işyeri değişikliği dilekçelerinin yakınlarında karşınıza çıkar ve yine çoğunlukla birdan fazla sayfadan oluşur. Meslek mensubunun yanında veya gözetiminde staj yapılmış ise bu belge dizisinin ilk sayfasında bir şirket adı yazılıdır, kategori eklenirken o şirketin vergi numarası da girilmelidir. Eğer meslek mensubu yanında staj yapılmışsa o meslek mensubunun vergi numarası girilmelidir.",
+    keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
   }
 ];
 
