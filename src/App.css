@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: rgba(100, 100, 100, 0.15);
+  line-height: 1.6;
 }
 
 a {
@@ -9,7 +10,7 @@ a {
 }
 
 main {
-  max-width: 700px;
+  max-width: 850px;
   width: 97%;
   margin: 0 auto;
   padding: 4em 0 2em; 
@@ -47,7 +48,7 @@ img {
   border-radius: 3px;
   background-color: hsla(123, 60%, 49%, 0.2);
   box-shadow: 1px 2px 30px hsla(123, 60%, 49%, 0.2);
-  margin: 0.8em 0;
+  margin: 1.2em 0;
   display: grid;
   grid-template-columns: 130px auto;
   grid-gap: 5px;

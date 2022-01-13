@@ -9,7 +9,12 @@ const Document = () => {
     <div>
       <h1 className="doc-title">{ doc.title }</h1>
       <p className="doc-par">{ doc.desc }</p>
-      <img className="doc-img" src={ doc.img } alt="doc-pic" />
+      <p className="doc-par"><strong>Örnek Fotoğraflar</strong></p>
+      {
+        doc.img.map(img => (
+          <img key={img} className="doc-img" src={ img } alt="doc-pic" />
+        ))
+      }
     </div>
   )
 }
