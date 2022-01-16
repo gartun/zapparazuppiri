@@ -1,3 +1,17 @@
+:root {
+  --max-width: 850px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: rgba(100, 100, 100, 0.15);
@@ -10,7 +24,7 @@ a {
 }
 
 main {
-  max-width: 850px;
+  max-width: var(--max-width);
   width: 97%;
   margin: 0 auto;
   padding: 4em 0 2em; 
@@ -23,6 +37,10 @@ img {
   border: 3px solid aqua;
   border-radius: 10px;
   box-shadow: 2px 2px 30px gray;
+}
+
+input {
+  padding: 0.45em;
 }
 
 .search {
@@ -50,8 +68,9 @@ img {
   box-shadow: 1px 2px 30px hsla(123, 60%, 49%, 0.2);
   margin: 1.2em 0;
   display: grid;
+  align-items: center;
   grid-template-columns: 130px auto;
-  grid-gap: 5px;
+  grid-gap: 10px;
   transition: transform .4s;
 }
 
@@ -86,3 +105,81 @@ img.doc-img {
   /* height: 550px; */
 }
 
+tr:nth-of-type(odd) {
+  background-color: rgba(200, 200, 200, 0.75);
+}
+
+th {
+  background-color: rgba(70, 170, 105, 0.5);
+  color: ghostwhite;
+}
+
+td {
+  padding: 0.5em 0.25em;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+.tax-table {
+  margin: 1.2em 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tax-table * {
+  border: 1px solid gray;
+}
+
+.tax-table td:first-of-type {
+  width: 40%;
+}
+
+.tax-table td:nth-of-type(2) {
+  width: 30%;
+}
+
+.tax-table td:nth-of-type(3), .tax-table td:nth-of-type(4), .tax-table td:nth-of-type(5) {
+  text-align: center;
+  width: 10%;
+}
+
+.action-btn {
+  padding: 0.45em 0.65em;
+  border-radius: 5px;
+  background: rgba(70, 170, 105, 0.5);
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background-color: rgba(70, 170, 105, 0.85);
+}
+
+.btn-danger {
+  background-color: rgba(233, 10, 10, 0.75);
+  color: white;
+  border-color: white;
+}
+
+.btn-danger:hover {
+  background-color: crimson;
+}
+
+.copy {
+  position: absolute;
+  bottom: 2.5em;
+  right: 2.5em;
+  transform: translateX(calc(100% + 2.5em));
+  background:hsl(123, 80%, 25%);
+  color: white;
+  padding: 1.2em 0.6em;
+  border-radius: 10px;
+  transition: transform 0.25s;
+}
+
+.copy.show {
+  transform: translateX(0);
+}

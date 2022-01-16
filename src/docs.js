@@ -19,6 +19,20 @@ const docs = [
     img: ["/img/aylik-hizmet.jpg"],
     desc: "Çoğunlukla işyeri değişikliği dilekçelerinin yakınlarında karşınıza çıkar ve yine çoğunlukla birdan fazla sayfadan oluşur. Meslek mensubunun yanında veya gözetiminde staj yapılmış ise bu belge dizisinin ilk sayfasında bir şirket adı yazılıdır, kategori eklenirken o şirketin vergi numarası da girilmelidir. Eğer meslek mensubu yanında staj yapılmışsa o meslek mensubunun vergi numarası girilmelidir.",
     keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
+  },
+  {
+    id: 4,
+    title: "Meslek Mensubu Ruhsatı",
+    img: ["/img/mensup-ruhsati.jpg"],
+    desc: "Meslek mensubunun(SMMM) görev yapma yetkisini gösteren bu belge çoğunlukla 'Oda Kayıt Belgesi' veya 'Faaliyet Belgesi' ile birlikte arka arkaya gelecek şekilde karşımıza çıkar, 'Meslek Mensubunun Ruhsatı' kategorisine gider. Uygun vergi numarası girilmelidir.",
+    keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
+  },
+  {
+    id: 15,
+    title: "mezun belgesi (E-Devlet)",
+    img: ["/img/mezun-belgesi.jpg"],
+    desc: "'Mezun Belgesi' başlıklı bu belge E-Devlet üzerinden alınmıştır ve genellikle SGS ile ilgili evrakların arasında karşımıza çıkar. Bu sebeple 'Mezun Belgesi(E-Devlet) kategorisine gider.' ",
+    keywords: "e-devlet mezun belgesi yök"
   }
 ];
 
