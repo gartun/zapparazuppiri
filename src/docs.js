@@ -28,6 +28,13 @@ const docs = [
     keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
   },
   {
+    id: 10,
+    title: "Çalışma Belgesi (Görev Tanımı)",
+    img: ["/img/calisma-belgesi.jpg", "/img/calisma-belgesi-1.jpg"],
+    desc: "Çoğunlukla meslek mensubunun(SMMM) isminin geçtiği bu tür belgeler, mensubun şirkette üstlendiği görevi tanımlayan ifadeler içermektedir. İşveren konumunda olan şirketten bir yetkilinin imzasını taşır. Ancak, şu anda uygun bir kategori olmadığı için, adayların isimlerinin geçtiği belgelerde aynı kategoriye gitmektedir.",
+    keywords: "çalışma belgesi meslek mensubunun şirketteki görevini gösterir görev tanımı"
+  },
+  {
     id: 15,
     title: "mezun belgesi (E-Devlet)",
     img: ["/img/mezun-belgesi.jpg"],
