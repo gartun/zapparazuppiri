@@ -1,24 +1,29 @@
 import { Switch, Route } from "react-router-dom";
+
+import useToken from "./useToken";
+
 import "./App.css";
 
 import Home from "./screens/Home";
 import Document from "./screens/Document";
 import TaxNo from "./screens/TaxNo";
-import PrivateRoute from "./screens/PrivateRoute";
-import PublicRoute from "./screens/PublicRoute";
 
 import Login from "./screens/Login";
 
 function App() {
+  const { token, setToken } = useToken();
 
   return (
     <main>
-      <Switch>
-        <PrivateRoute exact path="/" component={Home} />
-        <PublicRoute exact path="/login" component={Login} />
-        <PrivateRoute path="/doc/:id" component={Document} />
-        <Route exact path="/tax" component={TaxNo} />
-      </Switch>
+      {!token ? (
+        <Login setToken={setToken} />
+      ) : (
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/doc/:id" component={Document} />
+          <Route exact path="/tax" component={TaxNo} />
+        </Switch>
+      )}
     </main>
   );
 }

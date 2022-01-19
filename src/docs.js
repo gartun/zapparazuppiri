@@ -17,7 +17,7 @@ const docs = [
     id: 3,
     title: "hizmet listesi (aylık hizmet listesi)",
     img: ["/img/aylik-hizmet.jpg"],
-    desc: "Çoğunlukla işyeri değişikliği dilekçelerinin yakınlarında karşınıza çıkar ve yine çoğunlukla birdan fazla sayfadan oluşur. Meslek mensubunun yanında veya gözetiminde staj yapılmış ise bu belge dizisinin ilk sayfasında bir şirket adı yazılıdır, kategori eklenirken o şirketin vergi numarası da girilmelidir. Eğer meslek mensubu yanında staj yapılmışsa o meslek mensubunun vergi numarası girilmelidir.",
+    desc: "Çoğunlukla işyeri değişikliği dilekçelerinin yakınlarında karşınıza çıkar ve yine çoğunlukla birden fazla sayfadan oluşur. Meslek mensubunun yanında veya gözetiminde staj yapılmış ise bu belge dizisinin ilk sayfasında bir şirket adı yazılıdır, kategori eklenirken o şirketin vergi numarası da girilmelidir. Eğer meslek mensubu yanında staj yapılmışsa o meslek mensubunun vergi numarası girilmelidir.",
     keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
   },
   {
@@ -49,12 +49,34 @@ const docs = [
     keywords: "doğum izni dilekçesi izin dilekçe"
   },
   {
+    id: 8,
+    title: "Sosyal güvenlik kayıt sorgulama",
+    img: ["/img/dilekce-dogum-izni.jpg"],
+    desc: "Adayın sosyal güvence sorgulama sonuçlarını gösterir. 'Devam ettiği anlaşılmıştır', 'kayıtlara rastlanmıştır' gibi olumlu cümlelerin yer aldığı belgeler 'Sosyal Güvenlik kayıt belgesi(karekodlu)'; 'işten ayrıldığı anlaşılmıştır' gibi olumsuz yapılı cümlelerin yer aldığı belgeler ise diğer 'Sosyal Güvenlik kayıt belgesi' kategorisine gider",
+    keywords: "ilgili makama sosyal güvenlik kayıt sorgulama"
+  },
+  {
     id: 10,
     title: "Çalışma Belgesi (Görev Tanımı)",
-    img: ["/img/calisma-belgesi.jpg", "/img/calisma-belgesi-1.jpg"],
-    desc: "Çoğunlukla meslek mensubunun(SMMM) isminin geçtiği bu tür belgeler, mensubun şirkette üstlendiği görevi tanımlayan ifadeler içermektedir. İşveren konumunda olan şirketten bir yetkilinin imzasını taşır. Ancak, şu anda uygun bir kategori olmadığı için, adayların isimlerinin geçtiği belgelerde aynı kategoriye gitmektedir.",
-    keywords: "çalışma belgesi meslek mensubunun şirketteki görevini gösterir görev tanımı"
+    img: ["/img/calisma-belgesi.jpg", "/img/calisma-belgesi-1.jpg", "/img/meslek-mensubu-gorevi.jpg"],
+    desc: "Çoğunlukla meslek mensubunun(SMMM) isminin geçtiği bu tür belgeler, mensubun şirkette üstlendiği görevi tanımlayan ifadeler içermektedir. İşveren konumunda olan şirketten bir yetkilinin imzasını taşır. Ancak, şu anda uygun bir kategori olmadığı için, adayların isimlerinin geçtiği belgeler de aynı kategoriye gitmektedir.",
+    keywords: "çalışma belgesi meslek mensubunun şirketteki görevini gösterir görev tanımı görevi yapmaktadır"
   },
+  {
+    id: 11,
+    title: "İstirahat Raporu (İş Görmezlik)",
+    img: ["/img/istirahat-raporu.jpg"],
+    desc: "Çoğunlukla adaya aittir, adayın belli bir süre boyunca staja ara vereceği anlamına gelir, 'Sağlık raporu veya işgörmezlik belgesi' kategorisine gider.",
+    keywords: "istirahat raporu rapor işgörmezlik belgesi"
+  },
+  {
+    id: 12,
+    title: "Vergi Dairesinden alınan",
+    img: ["/img/vergi-dairesinden-alinan.jpg"],
+    desc: "Vergi mükellefiyet belgesi ile karıştırılma ihtimali yüksek. Ancak, bu belge şirketin faaliyetleri ve mükellefiyeti hakkında bilgiler içermesiyle vergi mükellefiyet belgesinden ayırt edilebilir. ",
+    keywords: "internet vergi dairesi şirket vergi faaliyetler mükellefiyet dairesinden alınan"
+  },
+
   {
     id: 15,
     title: "mezun belgesi (E-Devlet)",
@@ -69,6 +91,14 @@ const docs = [
     desc: "'Meslek Mensubu Değişikliği Dilekçesi' kategorisine gider.",
     keywords: "meslek mensubu değişikliği dilekçesi"
   },
+  {
+    id: 17,
+    title: "Vize Fotokopisi",
+    img: ["/img/vize-fotokopisi.jpg"],
+    desc: "Nadiren karşılaşırsınız, belki de hiç karşılaşmazsınız.",
+    keywords: "vize pasaport yurtdışı"
+  },
+
 ];
 
 export default docs;

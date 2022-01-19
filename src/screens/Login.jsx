@@ -1,19 +1,22 @@
 import { useState } from "react";
 
-import useAuthCtx from "../context/Context";
-
-const Login = () => {
+const Login = ({ setToken }) => {
   const [username, setUsername] = useState("");
-  const { LogUser } = useAuthCtx();
+  const [pwd, setPwd] = useState("");
   
+
   const handleLogin = e => {
     e.preventDefault();
     
-    
+    if(username === "türmob" && pwd === "medoc1234") {
+      setToken("t4gh4hj42");
+    } else {
+      alert("Yanlış kullanıcı adı veya parola!");
+    }
   }
   
   return (
-    <div>
+    <div className="form-wrapper">
       <form>
         <div>
           <label>Kullanıcı İsmi: </label>
@@ -25,7 +28,7 @@ const Login = () => {
           <input type="password" value={pwd} onChange={e => setPwd(e.target.value)} />
         </div>
 
-        <button onClick={handleLogin}>login</button>
+        <button onClick={handleLogin}>giriş yap</button>
       </form>
     </div>
   );

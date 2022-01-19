@@ -185,3 +185,34 @@ td {
 .copy.show {
   transform: translateX(0);
 }
+
+.form-wrapper {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.form-wrapper > form {
+  padding: 1em;
+  border: 2px solid hsl(123, 80%, 25%);
+  border-radius: 5px;
+  background: hsla(123, 60%, 49%, 0.2);
+}
+
+.form-wrapper div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.form-wrapper button {
+  cursor: pointer;
+  display: block;
+  margin: 0.8em auto 0;
+  padding: 0.5em 1.2em;
+}
+
+.form-wrapper input {
+  font-size: 1rem;
+}
