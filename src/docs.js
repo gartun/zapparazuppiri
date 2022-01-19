@@ -25,7 +25,28 @@ const docs = [
     title: "Meslek Mensubu Ruhsatı",
     img: ["/img/mensup-ruhsati.jpg"],
     desc: "Meslek mensubunun(SMMM) görev yapma yetkisini gösteren bu belge çoğunlukla 'Oda Kayıt Belgesi' veya 'Faaliyet Belgesi' ile birlikte arka arkaya gelecek şekilde karşımıza çıkar, 'Meslek Mensubunun Ruhsatı' kategorisine gider. Uygun vergi numarası girilmelidir.",
-    keywords: "hizmet listesi ilk aylık hizmet listesi son aylık hizmet listesi sgk hizmet listesi"
+    keywords: "serbest mali müşavir ruhsatı ruhsat"
+  },
+  {
+    id: 5,
+    title: "Faaliyet Belgesi (Üye Sicil Kaydı)",
+    img: ["/img/faaliyet-belgesi.jpg", "/img/faaliyet-belgesi-1.jpg"],
+    desc: "Meslek mensubunun(SMMM) çeşitli bilgilerini içerir, 'Faaliyet Belgesi(Meslek mensubunun)' kategorisine gider.",
+    keywords: "faaliyet belgesi üye sicil kaydı"
+  },
+  {
+    id: 6,
+    title: "Dilekçe (Evrak Teslim)",
+    img: ["/img/evrak-teslim.jpg"],
+    desc: "Kendine ait bir kategori yok. Arama kısmına 'dilekçe' yazılır ve listede 'Dilekçe (Diğer)' bulunur, bunun hemen üstündeki 'Dilekçe' kategorisine atılır.",
+    keywords: "evrak teslim dilekçesi dilekçe"
+  },
+  {
+    id: 7,
+    title: "Dilekçe (Doğum İzni)",
+    img: ["/img/dilekce-dogum-izni.jpg"],
+    desc: "Üst kategori adı 'Dilekçe'dir. Bu dilekçelerin gidebileceği iki alt kategori mevcuttur; 'doğum ücretsiz izni' ve 'doğum izni'. Tekerrür var, bu sebeple hepsini 'doğum izni'ne atacağız.",
+    keywords: "doğum izni dilekçesi izin dilekçe"
   },
   {
     id: 10,
@@ -38,9 +59,16 @@ const docs = [
     id: 15,
     title: "mezun belgesi (E-Devlet)",
     img: ["/img/mezun-belgesi.jpg"],
-    desc: "'Mezun Belgesi' başlıklı bu belge E-Devlet üzerinden alınmıştır ve genellikle SGS ile ilgili evrakların arasında karşımıza çıkar. Bu sebeple 'Mezun Belgesi(E-Devlet) kategorisine gider.' ",
+    desc: "'Mezun Belgesi' başlıklı bu belge E-Devlet üzerinden alınmıştır ve genellikle SGS ile ilgili evrakların arasında karşımıza çıkar. Bu sebeple 'Mezun Belgesi(E-Devlet)' kategorisine gider.",
     keywords: "e-devlet mezun belgesi yök"
-  }
+  },
+  {
+    id: 16,
+    title: "Dilekçe (Meslek mensubu değişikliği)",
+    img: ["/img/meslek-mensubu-degisikligi-dilekcesi.jpg"],
+    desc: "'Meslek Mensubu Değişikliği Dilekçesi' kategorisine gider.",
+    keywords: "meslek mensubu değişikliği dilekçesi"
+  },
 ];
 
 export default docs;

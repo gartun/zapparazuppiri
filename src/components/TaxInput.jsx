@@ -26,7 +26,7 @@ const TaxInput = ({ handleAdd }) => {
           onChange={e => setBlockNum(e.target.value)}
         />
       </div>
-      <form style={{ display: "flex", justifyContent: "space-between" }}>
+      <form style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "5px" }}>
         <div>
           <label>İsim ve Adres:* </label>
           <input
