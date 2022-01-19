@@ -3,8 +3,14 @@ import { useState } from "react";
 import useAuthCtx from "../context/Context";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
   const { LogUser } = useAuthCtx();
+  
+  const handleLogin = e => {
+    e.preventDefault();
     
+    
+  }
   
   return (
     <div>
