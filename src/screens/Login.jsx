@@ -9,7 +9,9 @@ const Login = ({ setToken }) => {
     e.preventDefault();
     
     if(username === "türmob" && pwd === "medoc1234") {
-      setToken("t4gh4hj42");
+      sessionStorage.setItem("türmob-token", "urlksjck456")
+      
+      setToken("urlksjck456");
     } else {
       alert("Yanlış kullanıcı adı veya parola!");
     }

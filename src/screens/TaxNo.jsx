@@ -84,7 +84,7 @@ const TaxNo = () => {
             <tr>
               <th>İsim</th>
               <th>Vergi No</th>
-              <th colspan="3">İşlemler</th>
+              <th colSpan="3">İşlemler</th>
             </tr>
           </thead>
           <tbody>

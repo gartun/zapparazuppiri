@@ -51,7 +51,7 @@ const docs = [
   {
     id: 8,
     title: "Sosyal güvenlik kayıt sorgulama",
-    img: ["/img/dilekce-dogum-izni.jpg"],
+    img: ["/img/sosyal-guvenlik-kayit.jpg", "/img/sosyal-guvenlik-kayit-1.jpg"],
     desc: "Adayın sosyal güvence sorgulama sonuçlarını gösterir. 'Devam ettiği anlaşılmıştır', 'kayıtlara rastlanmıştır' gibi olumlu cümlelerin yer aldığı belgeler 'Sosyal Güvenlik kayıt belgesi(karekodlu)'; 'işten ayrıldığı anlaşılmıştır' gibi olumsuz yapılı cümlelerin yer aldığı belgeler ise diğer 'Sosyal Güvenlik kayıt belgesi' kategorisine gider",
     keywords: "ilgili makama sosyal güvenlik kayıt sorgulama"
   },
