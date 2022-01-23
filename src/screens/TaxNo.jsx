@@ -73,7 +73,7 @@ const TaxNo = () => {
   };
 
   return (
-    <>
+    <div className="tax-screen">
       <TaxInput handleAdd={handleAdd} />
       <div className={`copy ${showIsCopied ? "show" : ""}`}>
         <p>Kopyalandı!</p>
@@ -120,7 +120,7 @@ const TaxNo = () => {
           Hepsini Temizle
         </button>
       )}
-    </>
+    </div>
   );
 };
 

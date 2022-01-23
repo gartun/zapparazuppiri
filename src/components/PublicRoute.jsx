@@ -4,7 +4,7 @@ const PublicRoute = ({children: Component, token, ...rest}) => {
     return (
         <Route {...rest} render={props => (
             token ?
-                <Redirect to="/" />
+                <Redirect to="/docs" />
             : Component 
         )} />
     );

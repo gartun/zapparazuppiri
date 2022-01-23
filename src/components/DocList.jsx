@@ -13,7 +13,7 @@ const DocList = ({ keyword }) => {
     <div>
       {
         filteredList.length > 0 ? filteredList.map(d => (
-          <Link key={d.id} to={`/doc/${d.id}`} className="doc-card">
+          <Link key={d.id} to={`/docs/${d.id}`} className="doc-card">
             <img src={d.img[0]} alt="doc pic" />
             <div>
               <h1 className="doc-title">{d.title}</h1>
