@@ -1,9 +1,16 @@
 const docs = [
   {
+    id: 11,
+    title: "biyometrik fotoğraf",
+    img: ["/img/biyometrik.png"],
+    desc: "Adayın fotoğrafı.",
+    keywords: "biyometrik fotoğraf vesikalık"
+  },
+  {
     id: 1,
     title: "taahhütname",
     img: ["/img/taahhutname.jpg", "/img/taahhutname-1.jpg"],
-    desc: "Her ildeki aday dosyası düzenine bağlı olmakla birlikte, çoğunlukla bir tane taahhütname karşımıza çıkar ve bu taahhütname SGS ile ilgili evraklar arasında yer alır. Ancak en garanti yöntem olarak, eğer dosyanın içinde iki taahhütnameye rastlanmışsa, bu belgeler üzerindeki tarihler karşılaştırılır ve belge içeriklerine göz atılır. Erken tarihli belge, SGS ile ilgili kategoriye, yani arama kısmına 'taahhütname' yazıldıktan sonra çıkan ilk sıradaki kategori başlığına; diğer belge ise, eğer içeriği staja yönelikse, stajla ilgili kategori başlığına gitmelidir.",
+    desc: "Her ildeki aday dosyası düzenine bağlı olmakla birlikte, çoğunlukla bir tane taahhütname karşımıza çıkar ve bu taahhütname SGS ile ilgili evraklar arasında yer alır. Ancak zaman zaman birden fazla taahütname ile karşılaşılabilir, bunların hepsi, arama kısmına 'taah' yazıldığında ilk sırada çıkan 'Taahhütname' kategorisine gitmelidir.",
     keywords: "taahhütname taahhüt ederim tahütname taahütname"
   },
   {
@@ -23,7 +30,7 @@ const docs = [
   {
     id: 70,
     title: "Kimlik (Nüfus cüzdanı örneği)",
-    img: ["/img/kimlik.jpg", "/img/kimlik-1.webp"],
+    img: ["/img/kimlik.jpg", "/img/kimlik-1.webp", "/img/kimlik-2.png"],
     desc: "Adaya ait vatandaşlık bilgilerinin yer aldığı belgeler. 'Kimlik belgesi(Nüfus)' kategorisine gider.",
     keywords: "nüfus cüzdanı örneği kimlik tc kimlik"
   },
@@ -66,8 +73,15 @@ const docs = [
     id: 3689,
     title: "Sözleşme (Ek Protokol)",
     img: ["/img/sözlesme.jpg", "/img/sözlesme-1.jpg"],
-    desc: "Meslek mensubu/mesleki şirket ve işveren konumundaki şirket arasında kurulan iş anlaşmasının belgeleridir. 'Sözleşme' kategorisine gider.",
+    desc: "Meslek mensubu/mesleki şirket ve işveren konumundaki şirket arasında kurulan iş anlaşmasının belgeleridir. 'Sözleşme' kategorisine gider. Uygun vergi numarası girilmelidir.",
     keywords: "Sözleşme ek protokol tasdik sözleşmesi"
+  }, 
+  {
+    id: 36890,
+    title: "Diploma (Mezuniyet)",
+    img: ["/img/diploma.png", "/img/diploma-1.png", "/img/diploma-2.png", "/img/gecici-mezuniyet-belgesi.jpg"],
+    desc: "Adaya ait olan mezuniyet/diploma belgeleri; eğer üzerinde noter onayı varsa 'dipl' yazıldığında ikinci sırada çıkan 'e-mezun belgesi...' diye başlayan kategoriye, noter onayı yoksa üçüncü sırada çıkan 'Diploma/Geçici Mezuniyet' kategorisine gider. Bu belgeler ardından gelen transkript(not döküm) varsa, bu belgelerle aynı kategoriye atılır.",
+    keywords: "geçici mezuniyet belgesi diploma not dökümü transkript"
   }, 
   {
     id: 4,
@@ -98,11 +112,25 @@ const docs = [
     keywords: "staj onay belgesi"
   },
   {
+    id: 4665,
+    title: "dekont",
+    img: ["/img/dekont.png", "/img/dekont-1.png"],
+    desc: "'Dekont' kategorisine gider. 'Serbest meslek faturası' ile şeklen farklıdırlar, karıştırmazsınız. Genellikle SGS dönemi belgeleri arasında karşınıza çıkarlar.",
+    keywords: "fiş fatura dekont"
+  },
+  {
     id: 6,
     title: "Dilekçe (Evrak Teslim)",
     img: ["/img/evrak-teslim.jpg"],
     desc: "Kendine ait bir kategori yok. Arama kısmına 'dilekçe' yazılır ve listede 'Dilekçe (Diğer)' bulunur, bunun hemen üstündeki 'Dilekçe' kategorisine atılır.",
     keywords: "evrak teslim dilekçesi dilekçe"
+  },
+  {
+    id: 66,
+    title: "Dilekçe (Staj Başlama)",
+    img: ["/img/staja-baslama-dilekcesi.png"],
+    desc: "Adayın stajının başladığını gösterir, düzenli dosyalarda 'Staj Onay Belgesi'nin hemen yanında yer alır. Bu sayede 'Yanında/Gözetiminde' ayrımı yapabiliriz. Karışık dosyalarda ise 'İşe Giriş Bildirge'lerindeki adresle dilekçe üzerindeki adresi karşılaştırmamız gerekebilir. ",
+    keywords: "staja başlama dilekçesi dilekçe"
   },
   {
     id: 7,
@@ -115,14 +143,21 @@ const docs = [
     id: 8,
     title: "Sosyal güvenlik kayıt sorgulama",
     img: ["/img/sosyal-guvenlik-kayit.jpg", "/img/sosyal-guvenlik-kayit-1.jpg", "/img/sosyal-guvenlik-kayit-2.jpg"],
-    desc: "Adayın sosyal güvence sorgulama sonuçlarını gösterir. 'İşe devam ettiği anlaşılmıştır', 'kayıtlara rastlanmıştır' gibi olumlu cümlelerin yer aldığı belgeler 'Sosyal Güvenlik kayıt belgesi(karekodlu)'; 'işten ayrıldığı anlaşılmıştır', 'kayda rastlanılmamıştır' gibi olumsuz yapılı cümlelerin yer aldığı belgeler ise diğer 'Sosyal Güvenlik kayıt belgesi' kategorisine gider",
+    desc: "Adayın sosyal güvence sorgulama sonuçlarını gösterir. 'İşe devam ettiği anlaşılmıştır', 'kayıtlara rastlanmıştır', 'tescilli olduğu anlaşılmıştır' gibi olumlu cümlelerin yer aldığı belgeler 'Sosyal Güvenlik kayıt belgesi(karekodlu)'; 'işten ayrıldığı anlaşılmıştır', 'kayda rastlanılmamıştır' gibi olumsuz yapılı cümlelerin yer aldığı belgeler ise diğer 'Sosyal Güvenlik kayıt belgesi' kategorisine gider",
     keywords: "ilgili makama sosyal güvenlik kayıt sorgulama"
+  },
+  {
+    id: 9,
+    title: "kurs katılım belgesi",
+    img: ["/img/kurs-katilim-belgesi.png", "/img/kurs-katilim-belgesi-1.png", "/img/kurs-katilim-belgesi-2.png", "/img/kurs-katilim-belgesi-3.png"],
+    desc: "Belge düzeni saçma şekilde değişmemiş aday dosyalarında karşımıza çıktığında, karar yazısı gibi, dekont gibi, zaman zaman fotoğraf gibi, ders programının yazılı olduğu belge gibi ekler de karşımıza çıkar. Bütün bunlar toplu şekilde 'Kurs katılım belgesi' kategorisine gider.",
+    keywords: "kurs katılım belgesi kurs katılım dekontu kurs katılım kararı"
   },
   {
     id: 10,
     title: "Çalışma Belgesi (Görev Tanımı)",
-    img: ["/img/calisma-belgesi.jpg", "/img/calisma-belgesi-1.jpg", "/img/meslek-mensubu-gorevi.jpg", "/img/calisma-belgesi-2.jpg"],
-    desc: "Çoğunlukla meslek mensubunun(SMMM) isminin geçtiği bu tür belgeler, mensubun şirkette üstlendiği görevi tanımlayan ifadeler içermektedir. İşveren konumunda olan şirketten bir yetkilinin imzasını taşır. Ancak, şu anda uygun bir kategori olmadığı için, adayların isimlerinin geçtiği belgeler de aynı kategoriye gitmektedir.",
+    img: ["/img/calisma-belgesi.png", "/img/calisma-belgesi-1.jpg", "/img/meslek-mensubu-gorevi.jpg", "/img/calisma-belgesi-2.jpg"],
+    desc: "Son değişiklikle, 'meslek' yazıldığında ikinci sıradaki 'Staja onaya veren meslek mensubunun...' diye başlayan kategoriye gider. Çoğunlukla meslek mensubunun(SMMM) isminin geçtiği bu tür belgeler, mensubun şirkette üstlendiği görevi tanımlayan ifadeler içermektedir. İşveren konumunda olan şirketten bir yetkilinin imzasını taşır. Ancak, şu anda uygun bir kategori olmadığı için, adayların isimlerinin geçtiği belgeler de aynı kategoriye gitmektedir.",
     keywords: "çalışma belgesi meslek mensubunun şirketteki görevini gösterir görev tanımı görevi yapmaktadır"
   },
   {
@@ -163,7 +198,7 @@ const docs = [
   {
     id: 15,
     title: "mezun belgesi (E-Devlet)",
-    img: ["/img/mezun-belgesi.jpg"],
+    img: ["/img/mezun-belgesi.png"],
     desc: "'Mezun Belgesi' başlıklı bu belge E-Devlet üzerinden alınmıştır ve genellikle SGS ile ilgili evrakların arasında karşımıza çıkar. Bu sebeple 'Mezun Belgesi(E-Devlet)' kategorisine gider.",
     keywords: "e-devlet mezun belgesi yök"
   },
