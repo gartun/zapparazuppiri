@@ -7,6 +7,7 @@ const DocList = ({ keyword }) => {
   const filteredList = keyword !== "" ?
                          docs.filter(doc => doc.keywords.includes(keyword.toLowerCase())) 
                        : docs;
+
   const getExcerpt = desc => desc.length < 350 ? desc : `${desc.substring(0, 350)}...`;
 
   return (

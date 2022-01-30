@@ -3,6 +3,7 @@ const Search = ({ setKeyword }) => {
 
   const handleChange = e => {
     setKeyword(e.target.value);
+    
     sessionStorage.setItem("turmob-keyword", e.target.value);
   }
 

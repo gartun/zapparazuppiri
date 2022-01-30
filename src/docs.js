@@ -1,6 +1,6 @@
 const docs = [
   {
-    id: 11,
+    id: 978654,
     title: "biyometrik fotoğraf",
     img: ["/img/biyometrik.png"],
     desc: "Adayın fotoğrafı.",

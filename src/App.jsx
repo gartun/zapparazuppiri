@@ -13,8 +13,9 @@ import MyNavLink from "./components/MyNavLink";
 import Login from "./screens/Login";
 
 function App() {
-
-  const [token, setToken] = useState(sessionStorage.getItem("türmob-token") || "");
+  const [token, setToken] = useState(
+    sessionStorage.getItem("türmob-token") || ""
+  );
 
   return (
     <>
@@ -33,10 +34,15 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/tax" component={TaxNo} />
-          <PublicRoute path="/login" exact token={token} >
+          <PublicRoute path="/login" exact token={token}>
             <Login setToken={setToken} />
           </PublicRoute>
-          <PrivateRoute component={Home} path={["/", "/docs"]} exact token={token} />
+          <PrivateRoute
+            component={Home}
+            path={["/", "/docs"]}
+            exact
+            token={token}
+          />
           <PrivateRoute component={Document} path="/docs/:id" token={token} />
         </Switch>
       </main>

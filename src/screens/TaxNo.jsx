@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
+import useStorage from "../hooks/useStorage";
 import TaxInput from "../components/TaxInput";
 
 const TaxNo = () => {
-  const [numbers, setNumbers] = useState({});
+  const {numbers, setNumbers} = useStorage();
   const [showIsCopied, setShowIsCopied] = useState(false);
-
-  useEffect(() => {
-    setNumbers(JSON.parse(localStorage.getItem("taxno")) || {});
-  }, []);
 
   const handleAdd = (name, num, blockNum) => {
     if (Object.keys(numbers).includes(name)) {
@@ -46,7 +43,7 @@ const TaxNo = () => {
   };
 
   const handleDelete = (key) => {
-    const conf = window.confirm(`${key} kaydını silmek istiyor musunuz?`);
+    const conf = window.confirm(`${key} kaydını silmek üzeresiniz...`);
 
     if (!conf) return;
 
@@ -64,7 +61,7 @@ const TaxNo = () => {
   };
 
   const handleClearAll = () => {
-    const conf = window.confirm("tüm kayıtları silmek istiyor musunuz?");
+    const conf = window.confirm("tüm kayıtları silmek üzeresiniz...");
 
     if (!conf) return;
 
