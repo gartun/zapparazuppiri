@@ -9,10 +9,19 @@ const TaxInput = ({ handleAdd }) => {
   const handleAddLocally = (e) => {
     e.preventDefault();
 
-    handleAdd(name, num, blockNum);
+    const res = handleAdd(name, num, blockNum);
 
+    /*
+      After invoking the handleAdd function, we empty the
+      both input fields. But if the result returned by that
+      function is equal to the string "same name", then we keep
+      'num' state unchanged so that the user does not have to
+       re-type the whole tax number
+    */
+    if(res !== "same name") setNum("");
     setName("");
-    setNum("");
+
+    // set focus back to the name field
     inpRef.current.focus();
   };
 
