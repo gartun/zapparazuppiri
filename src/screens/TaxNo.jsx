@@ -2,29 +2,40 @@ import { useState } from "react";
 
 import useStorage from "../hooks/useStorage";
 import TaxInput from "../components/TaxInput";
+import TaxRow from "../components/TaxRow";
 
 const TaxNo = () => {
   const {numbers, setNumbers} = useStorage();
   const [showIsCopied, setShowIsCopied] = useState(false);
 
   const handleAdd = (name, num, blockNum) => {
-    if (Object.keys(numbers).includes(name)) {
-      alert("aynı isimde bir kayıt mevcut!");
-      return;
+    for(let i = 0; i < numbers.length; i++) {
+      const currObj = numbers[i];
+
+      if(currObj.title === name) {
+        alert("aynı isimde bir kayıt mevcut!");
+        return "same name";
+      }
+
+      if(currObj.num === num) {
+        alert("aynı vergi numarasına sahip bir kayıt mevcut!");
+        return;
+      }
     }
 
-    if (Object.values(numbers).includes(num)) {
-      alert("aynı vergi numarasına sahip bir kayıt mevcut!");
-      return;
-    }
+    const additionalName = blockNum ? ` (${blockNum})` : "";
+    const newArr = [ 
+      ...numbers,
+      {
+        id: name,
+        title: name + additionalName,
+        num,
+      }
+    ];
 
-    const additionalName = blockNum ? `(${blockNum})` : "";
-    const newObj = { ...numbers };
-    newObj[`${name} ${additionalName}`] = num;
+    localStorage.setItem("taxno", JSON.stringify(newArr));
 
-    localStorage.setItem("taxno", JSON.stringify(newObj));
-
-    setNumbers(newObj);
+    setNumbers(newArr);
   };
 
   const handleCopy = (no) => {
@@ -47,17 +58,11 @@ const TaxNo = () => {
 
     if (!conf) return;
 
-    const newObj = {};
+    const newArr = numbers.filter((obj) => obj.id !== key);
 
-    const newKeys = Object.keys(numbers).filter((k) => k !== key);
+    localStorage.setItem("taxno", JSON.stringify(newArr));
 
-    newKeys.forEach((nK) => {
-      newObj[nK] = numbers[nK];
-    });
-
-    localStorage.setItem("taxno", JSON.stringify(newObj));
-
-    setNumbers(newObj);
+    setNumbers(newArr);
   };
 
   const handleClearAll = () => {
@@ -66,8 +71,25 @@ const TaxNo = () => {
     if (!conf) return;
 
     localStorage.removeItem("taxno");
-    setNumbers({});
+    setNumbers([]);
   };
+
+  const handleUpdate = (key, name, num) => {
+    const newArr = numbers.map(obj => {
+      if(obj.id === key) {
+        return {
+          id: name,
+          title: name,
+          num
+        }
+      }
+
+      return obj;
+    });
+
+    localStorage.setItem("taxno", JSON.stringify(newArr));
+    setNumbers(newArr);
+  }
 
   return (
     <div className="tax-screen">
@@ -85,34 +107,22 @@ const TaxNo = () => {
             </tr>
           </thead>
           <tbody>
-            {Object.keys(numbers).length > 0 &&
-              Object.keys(numbers).map((key) => (
-                <tr key={key}>
-                  <td>{key}</td>
-                  <td>{numbers[key]}</td>
-                  <td>
-                    <button
-                      className="action-btn"
-                      onClick={() => handleCopy(numbers[key])}
-                    >
-                      Kopyala
-                    </button>
-                  </td>
-                    
-                  <td>
-                    <button
-                      className="action-btn btn-danger"
-                      onClick={() => handleDelete(key)}
-                    >
-                      Sil
-                    </button>
-                  </td>
-                </tr>
+            {numbers.length > 0 &&
+              numbers.map((obj) => (
+                <TaxRow 
+                  key={obj.id}
+                  id={obj.id}
+                  title={obj.title}
+                  num={obj.num}
+                  handleDelete={handleDelete}
+                  handleCopy={handleCopy}
+                  handleUpdate={handleUpdate}
+                />
               ))}
           </tbody>
         </table>
       </div>
-      {Object.keys(numbers).length > 0 && (
+      {numbers.length > 0 && (
         <button className="action-btn btn-danger" onClick={handleClearAll}>
           Hepsini Temizle
         </button>

@@ -171,14 +171,14 @@ const docs = [
     id: 12,
     title: "Vergi Dairesinden alınan",
     img: ["/img/vergi-dairesinden-alinan.jpg"],
-    desc: "Vergi mükellefiyet belgesi ile karıştırılma ihtimali yüksek. Ancak, bu belge şirketin faaliyetleri ve mükellefiyeti hakkında bilgiler içermesiyle vergi mükellefiyet belgesinden ayırt edilebilir. ",
+    desc: "Vergi mükellefiyet belgesi ile karıştırılma ihtimali yüksek. Ancak, bu belge şirketin faaliyetleri ve mükellefiyeti hakkında bilgiler içermesiyle vergi mükellefiyet belgesinden ayırt edilebilir. Uygun vergi numarası girilmelidir.",
     keywords: "internet vergi dairesi şirket vergi faaliyetler mükellefiyet dairesinden alınan"
   },
   {
     id: 13,
     title: "ticaret sicili gazetesi (sirküler, imza beyannamesi, vekaletname vs.)",
     img: ["/img/sicil-gazetesi.jpg", "/img/sicil-gazetesi-1.jpg", "/img/sicil-gazetesi-2.jpg"],
-    desc: "Çoğunlukla işveren konumundaki şirketin ismini içeren ticaret sicili gazetesi sayfalarından, bu şirketin imza sirkülerinden, şirket sahiplerinin kimlik fotokopilerinden, vekaletnamelerden, imza beyannamelerinden oluşur.",
+    desc: "Çoğunlukla işveren konumundaki şirketin ismini içeren ticaret sicili gazetesi sayfalarından, bu şirketin imza sirkülerinden, şirket sahiplerinin kimlik fotokopilerinden, vekaletnamelerden, imza beyannamelerinden oluşur. Uygun vergi numarası girilmelidir",
     keywords: "ticaret sicil gazetesi imza sirküleri imza beyannamesi vekaletname"
   },
   {

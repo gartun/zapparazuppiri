@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 const useStorage = () => {
-  const [numbers, setNumbers] = useState({});
+  const [numbers, setNumbers] = useState([]);
 
   useEffect(() => {
-    setNumbers(JSON.parse(localStorage.getItem("taxno")) || {});
+    setNumbers(JSON.parse(localStorage.getItem("taxno")) || []);
   }, []);
 
   return {numbers, setNumbers};

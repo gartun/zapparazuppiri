@@ -24,6 +24,12 @@ a {
   color: unset;
 }
 
+button:disabled{
+  opacity: 0.5;
+  user-select: none;
+  pointer-events: none;
+}
+
 header {
   background: var(--main-green);
   color: white;
