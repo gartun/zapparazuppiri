@@ -35,7 +35,7 @@ const TaxNo = () => {
       }
     ];
 
-    localStorage.setItem("taxno", JSON.stringify(newArr));
+    localStorage.setItem("newtaxno", JSON.stringify(newArr));
 
     setNumbers(newArr);
   };
@@ -62,7 +62,7 @@ const TaxNo = () => {
 
     const newArr = numbers.filter((obj) => obj.id !== key);
 
-    localStorage.setItem("taxno", JSON.stringify(newArr));
+    localStorage.setItem("newtaxno", JSON.stringify(newArr));
 
     setNumbers(newArr);
   };
@@ -72,7 +72,7 @@ const TaxNo = () => {
 
     if (!conf) return;
 
-    localStorage.removeItem("taxno");
+    localStorage.removeItem("newtaxno");
     setNumbers([]);
   };
 
