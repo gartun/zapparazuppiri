@@ -4,7 +4,7 @@ const useStorage = () => {
   const [numbers, setNumbers] = useState([]);
 
   useEffect(() => {
-    setNumbers(JSON.parse(localStorage.getItem("taxno")) || []);
+    setNumbers(JSON.parse(localStorage.getItem("newtaxno")) || []);
   }, []);
 
   return {numbers, setNumbers};

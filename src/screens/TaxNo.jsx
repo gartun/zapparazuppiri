@@ -3,12 +3,14 @@ import { useState } from "react";
 import useStorage from "../hooks/useStorage";
 import TaxInput from "../components/TaxInput";
 import TaxRow from "../components/TaxRow";
+import FrequentlyUsed from "../components/FrequentlyUsed";
 
 const TaxNo = () => {
   const {numbers, setNumbers} = useStorage();
   const [showIsCopied, setShowIsCopied] = useState(false);
 
   const handleAdd = (name, num, blockNum) => {
+    
     for(let i = 0; i < numbers.length; i++) {
       const currObj = numbers[i];
 
@@ -127,6 +129,7 @@ const TaxNo = () => {
           Hepsini Temizle
         </button>
       )}
+      <FrequentlyUsed handleCopy={handleCopy} />
     </div>
   );
 };
