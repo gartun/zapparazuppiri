@@ -59,7 +59,7 @@ const TaxRow = ({
             </button>
           ) : (
             <button
-              className="action-btn"
+              className="action-btn edit-btn"
               onClick={() => setEditing(true)}
             >
               Düzenle
