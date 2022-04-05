@@ -194,6 +194,21 @@ td {
   --main-green: rgba(70, 170, 105, 0.85);
 }
 
+.edit-btn {
+  padding: 0.45em 0.65em;
+  border-radius: 5px;
+  background: yellow;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: black;
+  color: yellow;
+  border-color: yellow;
+}
+
 .btn-danger {
   background-color: rgba(233, 10, 10, 0.75);
   color: white;
