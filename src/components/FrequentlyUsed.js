@@ -7,6 +7,11 @@ const nums = [
     taxNo: 2910010976
   },
   {
+    id: 11,
+    title: "DRT Yeminli",
+    taxNo: 3130025213
+  },
+  {
     id: 2,
     title: "PwC Yeminli Mali Müşavirlik",
     taxNo: 6290044193
@@ -41,6 +46,11 @@ const nums = [
     title: "PwC Bağımsız Denetim",
     taxNo: 1460022405
   },
+  {
+    id: 9,
+    title: "Arkan yeminli mali",
+    taxNo: "0790344892"
+  }
 ];
 
 const FrequentlyUsed = ({ handleCopy }) => {
