@@ -220,8 +220,8 @@ td {
 }
 
 .copy {
-  position: absolute;
-  bottom: 2.5em;
+  position: fixed;
+  bottom: 60%;
   right: 2.5em;
   transform: translateX(calc(100% + 2.6em));
   background:hsl(123, 80%, 25%);

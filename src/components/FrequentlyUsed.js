@@ -17,6 +17,11 @@ const nums = [
     taxNo: 6290044193
   },
   {
+    id: 22,
+    title: "PwC Bağımsız Denetim",
+    taxNo: 1460022405
+  },
+  {
     id: 3,
     title: "Kuzey YMM ve Bağımsız",
     taxNo: 6010277204
@@ -43,11 +48,16 @@ const nums = [
   },
   {
     id: 8,
-    title: "PwC Bağımsız Denetim",
-    taxNo: 1460022405
+    title: "Güreli Yeminli Mali",
+    taxNo: 4430028598
   },
   {
     id: 9,
+    title: "BDO Denet Bağımsız",
+    taxNo: 2910010846
+  },
+  {
+    id: 10,
     title: "Arkan yeminli mali",
     taxNo: "0790344892"
   }
@@ -59,7 +69,7 @@ const FrequentlyUsed = ({ handleCopy }) => {
       <h2>sık kullanılanlar</h2>
       {
         nums.map(obj => (
-          <li key={obj.id} style={{ padding: "0.5em"}}>
+          <li key={obj.id} style={{ padding: "0.25em", borderBottom: "1px solid black"}}>
             {obj.title}-{obj.taxNo}-<button className="action-btn" onClick={() => handleCopy(obj.taxNo)}>Kopyala</button>
           </li>
         ))
